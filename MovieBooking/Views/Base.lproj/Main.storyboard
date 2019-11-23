@@ -36,24 +36,31 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="aRZ-7v-eH2" style="IBUITableViewCellStyleDefault" id="S1U-kC-wgM" customClass="MovieTableViewCell" customModule="MovieBooking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="74.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="aRZ-7v-eH2" detailTextLabel="JY8-5M-60d" style="IBUITableViewCellStyleSubtitle" id="S1U-kC-wgM" customClass="MovieTableViewCell" customModule="MovieBooking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="74.5" width="414" height="57.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S1U-kC-wgM" id="2M0-g3-itz">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Frozen II" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aRZ-7v-eH2">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="20" y="8" width="65" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="12:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JY8-5M-60d">
+                                                    <rect key="frame" x="20" y="31.5" width="32.5" height="16.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" trigger="accessoryAction" id="aIj-XK-Ftf"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="segueDetail" trigger="accessoryAction" id="aIj-XK-Ftf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -68,7 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KJq-cN-gP5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cDy-7b-6iL">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="cDy-7b-6iL">
                         <barButtonItem key="backBarButtonItem" title=" " id="WjC-3e-nbm"/>
                     </navigationItem>
                     <connections>

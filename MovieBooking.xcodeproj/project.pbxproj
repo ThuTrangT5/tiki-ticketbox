@@ -41,6 +41,10 @@
 		18FA916823898F2F0062F0E3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA916623898F2F0062F0E3 /* BaseViewController.swift */; };
 		18FA916A238991BD0062F0E3 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA9169238991BD0062F0E3 /* MovieTableViewCell.swift */; };
 		18FA916B238991BD0062F0E3 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA9169238991BD0062F0E3 /* MovieTableViewCell.swift */; };
+		18FA916E2389A0DF0062F0E3 /* MovieMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA916D2389A0DF0062F0E3 /* MovieMockData.swift */; };
+		18FA916F2389A0DF0062F0E3 /* MovieMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA916D2389A0DF0062F0E3 /* MovieMockData.swift */; };
+		18FA91712389A0EA0062F0E3 /* SeatMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA91702389A0EA0062F0E3 /* SeatMockData.swift */; };
+		18FA91722389A0EA0062F0E3 /* SeatMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA91702389A0EA0062F0E3 /* SeatMockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,8 @@
 		18FA916323898C2A0062F0E3 /* CommonVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonVariables.swift; sourceTree = "<group>"; };
 		18FA916623898F2F0062F0E3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18FA9169238991BD0062F0E3 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		18FA916D2389A0DF0062F0E3 /* MovieMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMockData.swift; sourceTree = "<group>"; };
+		18FA91702389A0EA0062F0E3 /* SeatMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatMockData.swift; sourceTree = "<group>"; };
 		7770449D60FE410DF28E3A7F /* Pods-MovieBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieBooking.release.xcconfig"; path = "Target Support Files/Pods-MovieBooking/Pods-MovieBooking.release.xcconfig"; sourceTree = "<group>"; };
 		B6D200CACE32A8AF7B34FB78 /* Pods_MovieBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEAA9BBFAD593DFB824E1B3 /* Pods-MovieBooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieBooking.debug.xcconfig"; path = "Target Support Files/Pods-MovieBooking/Pods-MovieBooking.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,10 +206,20 @@
 		18FA9150238987DA0062F0E3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				18FA916C238997030062F0E3 /* MockData */,
 				18FA91512389887B0062F0E3 /* NetworkManager.swift */,
 				18FA916323898C2A0062F0E3 /* CommonVariables.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		18FA916C238997030062F0E3 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				18FA916D2389A0DF0062F0E3 /* MovieMockData.swift */,
+				18FA91702389A0EA0062F0E3 /* SeatMockData.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		C0EF5F5B6BC68DEE8F6C2813 /* Pods */ = {
@@ -374,11 +390,13 @@
 				18FA915B2389897F0062F0E3 /* LoadingViewable.swift in Sources */,
 				18FA916123898B750062F0E3 /* BaseModel.swift in Sources */,
 				18FA916723898F2F0062F0E3 /* BaseViewController.swift in Sources */,
+				18FA916E2389A0DF0062F0E3 /* MovieMockData.swift in Sources */,
 				18FA916A238991BD0062F0E3 /* MovieTableViewCell.swift in Sources */,
 				18A8845B238980C70036E7D1 /* AppDelegate.swift in Sources */,
 				18FA915E238989F40062F0E3 /* ScreenViewModel.swift in Sources */,
 				18A88488238986AF0036E7D1 /* Seat.swift in Sources */,
 				18A8845D238980C70036E7D1 /* SceneDelegate.swift in Sources */,
+				18FA91712389A0EA0062F0E3 /* SeatMockData.swift in Sources */,
 				18FA91522389887B0062F0E3 /* NetworkManager.swift in Sources */,
 				18FA91552389891F0062F0E3 /* ListViewModel.swift in Sources */,
 				18A8847D2389832B0036E7D1 /* MovieListViewController.swift in Sources */,
@@ -403,7 +421,9 @@
 				18FA915C2389897F0062F0E3 /* LoadingViewable.swift in Sources */,
 				18A88489238986AF0036E7D1 /* Seat.swift in Sources */,
 				18FA91592389892A0062F0E3 /* BaseViewModel.swift in Sources */,
+				18FA916F2389A0DF0062F0E3 /* MovieMockData.swift in Sources */,
 				18A8848C238986C00036E7D1 /* User.swift in Sources */,
+				18FA91722389A0EA0062F0E3 /* SeatMockData.swift in Sources */,
 				18A88486238986A40036E7D1 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,6 +23,7 @@ class MovieTableViewCell: UITableViewCell {
 
     func bindData() {
         self.textLabel?.text = movie?.name
+        self.detailTextLabel?.text = movie?.time
     }
 
 }

@@ -21,5 +21,10 @@ class Movie: BaseModel {
     
     required init(json: JSON) {
         super.init(json: json)
+        
+        movieID = json["movieID"].string
+        name = json["name"].string
+        time = json["time"].string
+        imageURL = json["imageURL"].string
     }
 }

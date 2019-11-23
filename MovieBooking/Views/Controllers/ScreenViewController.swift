@@ -10,7 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ScreenViewController: UIViewController {
+class ScreenViewController: BaseViewController {
+    
+    var selectedMovie: Movie?
 
     override func viewDidLoad() {
         super.viewDidLoad()
