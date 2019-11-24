@@ -12,6 +12,7 @@ import RxCocoa
 
 class ScreenViewController: BaseViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var buttonContinue: BookingButton!
     @IBOutlet weak var labelBooked: UILabel!
@@ -35,8 +36,10 @@ class ScreenViewController: BaseViewController {
         super.setupUI()
         
         // collection view
-        self.collectionView.minimumZoomScale = 1
-        self.collectionView.maximumZoomScale = 4
+        self.scrollView.minimumZoomScale = 1
+        self.scrollView.maximumZoomScale = 4
+        self.scrollView.delegate = self
+        scrollView.zoomScale = 1
         
         // item size
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -125,5 +128,13 @@ class ScreenViewController: BaseViewController {
     @IBAction func ontouchContinue(_ sender: Any) {
         self.buttonContinue.rx.isActive.onNext(false)
         self.viewModel.bookTickets()
+    }
+    
+}
+
+extension ScreenViewController: UIScrollViewDelegate {
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return collectionView.superview
     }
 }
