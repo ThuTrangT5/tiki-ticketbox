@@ -97,6 +97,14 @@ class ScreenViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
         
+        self.viewModel.bookedCode
+            .subscribe(onNext: { (code) in
+                if let code = code {
+                    self.didBookSuccess(code: code)
+                }
+            })
+            .disposed(by: disposeBag)
+        
         self.collectionView.rx
             .itemSelected
             .subscribe(onNext: { [weak self](indexPath) in
@@ -106,10 +114,16 @@ class ScreenViewController: BaseViewController {
                 }
             })
             .disposed(by: disposeBag)
-        
+    }
+    
+    func didBookSuccess(code: String) {
+        self.showMessage(message: "Your booking code is \(code).", title: "Success") { [weak self] () in
+            self?.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func ontouchContinue(_ sender: Any) {
-        
+        self.buttonContinue.rx.isActive.onNext(false)
+        self.viewModel.bookTickets()
     }
 }

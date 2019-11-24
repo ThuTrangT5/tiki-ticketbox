@@ -23,6 +23,8 @@
 		18A88489238986AF0036E7D1 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A88487238986AF0036E7D1 /* Seat.swift */; };
 		18A8848B238986C00036E7D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8848A238986C00036E7D1 /* User.swift */; };
 		18A8848C238986C00036E7D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8848A238986C00036E7D1 /* User.swift */; };
+		18B20B9B238AFA220088DB87 /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B20B9A238AFA220088DB87 /* NetworkManagerMock.swift */; };
+		18B20B9C238AFA220088DB87 /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B20B9A238AFA220088DB87 /* NetworkManagerMock.swift */; };
 		18B3CD43238A41F700E52AB3 /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3CD42238A41F700E52AB3 /* SeatCollectionViewCell.swift */; };
 		18B3CD44238A41F700E52AB3 /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3CD42238A41F700E52AB3 /* SeatCollectionViewCell.swift */; };
 		18FA91522389887B0062F0E3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA91512389887B0062F0E3 /* NetworkManager.swift */; };
@@ -75,6 +77,7 @@
 		18A88484238986A40036E7D1 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		18A88487238986AF0036E7D1 /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 		18A8848A238986C00036E7D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		18B20B9A238AFA220088DB87 /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
 		18B3CD42238A41F700E52AB3 /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
 		18FA91512389887B0062F0E3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		18FA91542389891F0062F0E3 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -222,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				18FA916D2389A0DF0062F0E3 /* MovieMockData.swift */,
+				18B20B9A238AFA220088DB87 /* NetworkManagerMock.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -390,6 +394,7 @@
 			files = (
 				18A8845F238980C70036E7D1 /* ScreenViewController.swift in Sources */,
 				18FA91582389892A0062F0E3 /* BaseViewModel.swift in Sources */,
+				18B20B9B238AFA220088DB87 /* NetworkManagerMock.swift in Sources */,
 				18FA916423898C2A0062F0E3 /* CommonVariables.swift in Sources */,
 				18FA915B2389897F0062F0E3 /* LoadingViewable.swift in Sources */,
 				18FA916123898B750062F0E3 /* BaseModel.swift in Sources */,
@@ -422,6 +427,7 @@
 				18B3CD44238A41F700E52AB3 /* SeatCollectionViewCell.swift in Sources */,
 				18FA9175238A40610062F0E3 /* BookingButton.swift in Sources */,
 				18FA91562389891F0062F0E3 /* ListViewModel.swift in Sources */,
+				18B20B9C238AFA220088DB87 /* NetworkManagerMock.swift in Sources */,
 				18A8847E2389832B0036E7D1 /* MovieListViewController.swift in Sources */,
 				18FA915F238989F40062F0E3 /* ScreenViewModel.swift in Sources */,
 				18FA916523898C2A0062F0E3 /* CommonVariables.swift in Sources */,

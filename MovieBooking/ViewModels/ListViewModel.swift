@@ -38,7 +38,7 @@ class ListViewModel: BaseViewModel {
         let page = currentPage + 1
         self.isLoading.onNext(true)
         
-        NetworkManager.shared.getMovieList(page: page) { [weak self](movies, error) in
+        NetworkManagerMock.shared.getMovieList(page: page) { [weak self](movies, error) in
             self?.isLoading.onNext(false)
             
             if let error = error {

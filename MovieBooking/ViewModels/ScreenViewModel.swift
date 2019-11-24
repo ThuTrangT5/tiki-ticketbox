@@ -15,6 +15,7 @@ class ScreenViewModel: BaseViewModel {
     
     var selectedSeats: BehaviorSubject<[Seat]> = BehaviorSubject<[Seat]>(value: [])
     var didUpdateData: BehaviorSubject<Bool> = BehaviorSubject<Bool>(value: false)
+    var bookedCode: BehaviorSubject<String?> = BehaviorSubject<String?>(value: nil)
     
     override func setupBinding() {
         self.selectedMovie
@@ -32,7 +33,7 @@ class ScreenViewModel: BaseViewModel {
         }
         
         self.isLoading.onNext(true)
-        NetworkManager.shared.getSeats(movieID: movieID) { [weak self](seats, error) in
+        NetworkManagerMock.shared.getSeats(movieID: movieID) { [weak self](seats, error) in
             self?.isLoading.onNext(false)
             self?.didUpdateData.onNext(true)
             
@@ -75,5 +76,22 @@ class ScreenViewModel: BaseViewModel {
         }
         
         self.selectedSeats.onNext(currentSeats)
+    }
+    
+    func bookTickets() {
+        if let books = try? self.selectedSeats.value() {
+            
+            self.isLoading.onNext(true)
+            
+            NetworkManager.shared.bookTickets(seats: books) { [weak self](bookedCode, error) in
+                self?.isLoading.onNext(false)
+                if let error = error {
+                    self?.error.onNext(error)
+                    
+                } else if let code = bookedCode {
+                    self?.bookedCode.onNext(code)
+                }
+            }
+        }
     }
 }

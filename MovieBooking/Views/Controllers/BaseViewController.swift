@@ -30,11 +30,17 @@ class BaseViewController: UIViewController {
         
     }
     
-    func showErrorMessage(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let done = UIAlertAction(title: "Close", style: .default, handler: nil)
+    func showMessage(message: String, title: String? = nil, closeAction: (()->Void)? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let done = UIAlertAction(title: "Close", style: .default, handler: { (_) in
+            closeAction?()
+        })
         alert.addAction(done)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showErrorMessage(message: String) {
+        self.showMessage(message: message, title: "Error")
     }
     
     func handleError(error: Error) {
