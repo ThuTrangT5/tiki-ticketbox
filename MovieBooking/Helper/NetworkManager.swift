@@ -30,6 +30,7 @@ class NetworkManager: NSObject, MovieNetWorkProtocol {
     }
     
     func getSeats(movieID: String, callback: (([Seat], Error?)->Void)?) {
-        
+        let data = MovieMockData.listSeat()
+        callback?(data, nil)
     }
 }

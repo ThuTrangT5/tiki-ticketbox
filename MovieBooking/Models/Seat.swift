@@ -10,7 +10,7 @@ import SwiftyJSON
 
 enum SeatStatus: Int {
     case empty = 0
-    case picked = 1
+    case booked = 1
     case picking = 2
 }
 
@@ -26,6 +26,7 @@ class Seat: BaseModel {
     var status: SeatStatus = .empty
     var type: SeatType = .normal
     var price: Int = 0
+    var available: Bool = true
     
     var userID: String? // user who picked this seat
     
@@ -35,5 +36,18 @@ class Seat: BaseModel {
     
     required init(json: JSON) {
         super.init(json: json)
+        
+        seatID = json["seatID"].string
+        name = json["name"].string
+        price = json["price"].intValue
+        userID = json["userID"].string
+        available = json["available"].boolValue
+        
+        if let val = json["status"].int {
+            status = SeatStatus(rawValue: val) ?? .empty
+        }
+        if let val = json["type"].int {
+            type = SeatType(rawValue: val) ?? .normal
+        }
     }
 }
